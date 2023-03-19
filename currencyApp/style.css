@@ -1,0 +1,84 @@
+body
+{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    position: relative;
+    /* width: 600px;
+    height: 400px; */
+    background-color: #010101;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.box:after{
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.box:before{
+    content:'';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box h1{
+    color: rgb(255, 255, 255);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.box::after,
+.box::before{
+    background:linear-gradient(235deg,#89ff00,#060c21,#00bcd4)
+}
+
+
+.currency-container{
+    padding: 20px;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.currency-container select{
+    padding: 10px;
+}
+
+.currency-container input{
+    border: 0;
+    background: transparent;
+    font-size: 25px;
+    text-align: right;
+    color: aliceblue;
+}
+
+.exchange-rate{
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+select:focus,
+input:focus{
+    outline: 0;
+}
